@@ -7,7 +7,7 @@ metadata:
     - "exception"
     - "errors"
     - "rest"
-  guide: "https://github.com/puzzle/quarkus-chaosmonkey"
+  guide: "https://github.com/puzzle/quarkus-chaos-monkey"
   categories:
     - "errors"
   status: "experimental"
