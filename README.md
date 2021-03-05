@@ -61,7 +61,7 @@ Lists all configured monkeys. Lets you reconfigure or disable a specific monkey.
 ### Build-Time properties
 
 | Configuration Property                                            | Type          | Default      |
-|:----------------------------------------------------------------- |:------------- |: ------------|
+| ----------------------------------------------------------------- | ------------- | ------------ |
 | `quarkus.chaos-monkey.always-enabled`<br > By default this extension will only be included in dev and test. Setting this to `true` will also include this in Prod. | boolean       | `false`      |
 | `quarkus.chaos-monkey.base-path`<br > The base path for the application    | String  | `/chaos-monkey` |
 
@@ -69,6 +69,6 @@ Lists all configured monkeys. Lets you reconfigure or disable a specific monkey.
 ### Run-Time properties
 
 | Configuration Property                                            | Type          | Default      |
-|:----------------------------------------------------------------- |:------------- |: ------------|
+| ----------------------------------------------------------------- | ------------- | ------------ |
 | `quarkus.chaos-monkey.enabled`<br > If Chaos-Monkey should be enabled. By default, Chaos-Monkey is enabled if it is included (see `always-include`).   | boolean       | `true`      |
 
