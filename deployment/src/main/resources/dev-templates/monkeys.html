@@ -1,0 +1,72 @@
+{#include main}
+{#style}
+.annotation {
+color: gray;
+}
+{/style}
+{#title}Configured Monkeys{/title}
+{#body}
+<table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Class Name</th>
+        <th scope="col">Method Name</th>
+        <th scope="col">Enabled</th>
+        <th scope="col">Fixed exception</th>
+        <th scope="col">Error rate</th>
+        <th scope="col">Latency (ms)</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {#for monkey in info:monkeyInfo.monkeys}
+    <tr>
+        <form method="post" enctype="application/x-www-form-urlencoded">
+            <td>
+                {monkey.clazzName}
+            </td>
+            <td>
+                {monkey.methodName}
+            </td>
+            <td>
+                <label>
+                {#if monkey.enabled}
+                <input type="checkbox" name="enabled" value="true" checked>
+                {#else}
+                <input type="checkbox" name="enabled" value="true">
+                {/if}
+                </label>
+            </td>
+            <td>
+                <label>
+                {#if monkey.throwException}
+                <input type="checkbox" name="throwException" value="true" checked>
+                {#else}
+                <input type="checkbox" name="throwException" value="true">
+                {/if}
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input type="number" required name="errorRate" min="0.0" max="1.0" step=".01" value="{monkey.errorRate}" />
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input type="number" required name="latencyMs" min="0" value="{monkey.latencyMs}" />
+                </label> ms
+            </td>
+            <td>
+                <input type="hidden" name="clazzName" value="{monkey.clazzName}">
+                <input type="hidden" name="methodName" value="{monkey.methodName}">
+                <input type="submit" class="btn btn-primary btn-sm" value="Save" >
+            </td>
+        </form>
+    </tr>
+    {/for}
+    </tbody>
+</table>
+<br />
+<a href="annotations">Show Code Annotations</a>
+{/body}
+{/include}

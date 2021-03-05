@@ -1,0 +1,15 @@
+<a href="{urlbase}/monkeys" class="badge badge-light">
+    <i class="fa fa-bomb fa-fw"></i> Configured Monkeys <span class="badge badge-light">{info:monkeyInfo.size} (active {info:monkeyInfo.active})</span>
+</a>
+<br />
+<a href="{urlbase}/annotations" class="badge badge-light">
+    <i class="fa fa-code fa-fw"></i> Code Annotations <span class="badge badge-light">{info:monkeyInfo.knownMonkeySize} </span>
+</a>
+<br />
+<span class="badge badge-light">
+    <i class="fa fa-running fa-fw"></i> Always Enabled <span class="badge badge-light">{config:property('quarkus.chaos-monkey.always-include')}</span>
+</span>
+<br />
+<a href="{config:property('quarkus.http.non-application-root-path')}{config:property('quarkus.chaos-monkey.base-path')}" class="badge badge-light">
+    <i class="fa fa-map-signs fa-fw"></i> Base Path <span class="badge badge-light">{config:property('quarkus.http.non-application-root-path')}{config:property('quarkus.chaos-monkey.base-path')}</span>
+</a>

@@ -1,0 +1,13 @@
+name: "Chaos Monkey"
+metadata:
+  keywords:
+    - "chaos-monkey"
+    - "monkey"
+    - "chaos"
+    - "exception"
+    - "errors"
+    - "rest"
+  guide: "https://github.com/puzzle/quarkus-chaosmonkey"
+  categories:
+    - "errors"
+  status: "experimental"

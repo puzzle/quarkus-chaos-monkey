@@ -1,0 +1,41 @@
+{#include main}
+{#style}
+.annotation {
+color: gray;
+}
+{/style}
+{#title}Code Annotations{/title}
+{#body}
+<table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Class Name</th>
+        <th scope="col">Method Name</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {#for monkey in info:monkeyInfo.knownMonkeys}
+    <tr>
+        <form method="post" enctype="application/x-www-form-urlencoded">
+            <td>
+                {monkey.clazzName}
+            </td>
+            <td>
+                {monkey.methodName}
+            </td>
+            <td>
+                <input type="hidden" name="clazzName" value="{monkey.clazzName}">
+                <input type="hidden" name="methodName" value="{monkey.methodName}">
+                <input type="submit" class="btn btn-primary btn-sm" value="Create Monkey for Annotation" >
+            </td>
+        </form>
+    </tr>
+    {/for}
+    </tbody>
+</table>
+
+<br />
+<a href="monkeys">Show Configured Monkeys</a>
+{/body}
+{/include}
