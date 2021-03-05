@@ -8,7 +8,7 @@ using the Dev-UI integration or the provided RESTful API `/q/chaos-monkey`.
 ## Chaos Monkey Types
 
 | Error Type    | Executed      | Description  |
-|:------------- |:------------- |: ------------|
+| ------------- | ------------- | ------------ |
 | Latency       | After method  | Issues a `Thread.sleep()` in ms. Default: `0` |
 | ErrorRate     | After method  | Lets you specify a percentage of errors thrown (0 to 1). Default: `0` |
 | Exception     | After method  | Always triggers an exception if enabled. Default: `false` |
